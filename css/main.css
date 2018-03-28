@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff290d;
+  background: #ff241c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3130,9 +3130,9 @@ pre .javascript .function {
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 body {
-  background-image: url("/images/avatar.jpg");
+  background-image: url("/images/bg2.jpg");
   background-attachment: scroll;
   background-repeat: repeat-x;
-  background-color: #f5e5c1;
+  background-color: #d3d3d3;
   background-size: 100% auto;
 }
