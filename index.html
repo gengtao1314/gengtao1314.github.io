@@ -1353,8 +1353,8 @@
       
         
           
-          一、导出用户数据1exp [username]/[nserpasswd]@orcl file=test.dmp owner=[username]
-orcl为数据库名称二、导入新数据库1IMP [username]/[nserpasswd]@orcl@orcl fromuser=[username] 
+          一、导出用户数据(用该方式导出时会将煤油数据的表去除，所以要保证每个表都有数据)，要使用oracle用户123su - oracleexp [username]/[nserpasswd]@localhost:1521/orcl file=test.dmp owner=[username]
+orcl为
           ...
           <!--noindex-->
           <div class="post-button text-center">

@@ -148,17 +148,17 @@
 
 
 
-<meta name="description" content="一、导出用户数据1exp [username]/[nserpasswd]@orcl file=test.dmp owner=[username] orcl为数据库名称二、导入新数据库1IMP [username]/[nserpasswd]@orcl@orcl fromuser=[username] touser=[username] file=test.dmp 提示：可能要检查字符集，资料说要保证">
+<meta name="description" content="一、导出用户数据(用该方式导出时会将煤油数据的表去除，所以要保证每个表都有数据)，要使用oracle用户123su - oracleexp [username]/[nserpasswd]@localhost:1521/orcl file=test.dmp owner=[username] orcl为数据库名称二、导入新数据库1IMP [username]/[nserpasswd]@localhos">
 <meta property="og:type" content="article">
 <meta property="og:title" content="oracle导出用户数据">
 <meta property="og:url" content="http://yoursite.com/2018/04/08/oracle导出用户数据/index.html">
 <meta property="og:site_name" content="gtaotao">
-<meta property="og:description" content="一、导出用户数据1exp [username]/[nserpasswd]@orcl file=test.dmp owner=[username] orcl为数据库名称二、导入新数据库1IMP [username]/[nserpasswd]@orcl@orcl fromuser=[username] touser=[username] file=test.dmp 提示：可能要检查字符集，资料说要保证">
+<meta property="og:description" content="一、导出用户数据(用该方式导出时会将煤油数据的表去除，所以要保证每个表都有数据)，要使用oracle用户123su - oracleexp [username]/[nserpasswd]@localhost:1521/orcl file=test.dmp owner=[username] orcl为数据库名称二、导入新数据库1IMP [username]/[nserpasswd]@localhos">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-22T11:58:30.404Z">
+<meta property="og:updated_time" content="2018-06-28T02:52:27.375Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="oracle导出用户数据">
-<meta name="twitter:description" content="一、导出用户数据1exp [username]/[nserpasswd]@orcl file=test.dmp owner=[username] orcl为数据库名称二、导入新数据库1IMP [username]/[nserpasswd]@orcl@orcl fromuser=[username] touser=[username] file=test.dmp 提示：可能要检查字符集，资料说要保证">
+<meta name="twitter:description" content="一、导出用户数据(用该方式导出时会将煤油数据的表去除，所以要保证每个表都有数据)，要使用oracle用户123su - oracleexp [username]/[nserpasswd]@localhost:1521/orcl file=test.dmp owner=[username] orcl为数据库名称二、导入新数据库1IMP [username]/[nserpasswd]@localhos">
 
 
 
@@ -443,8 +443,8 @@
       
 
       
-        <p>一、导出用户数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exp [username]/[nserpasswd]@orcl file=test.dmp owner=[username]</span><br></pre></td></tr></table></figure></p>
-<p>orcl为数据库名称<br>二、导入新数据库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IMP [username]/[nserpasswd]@orcl@orcl fromuser=[username] touser=[username] file=test.dmp</span><br></pre></td></tr></table></figure></p>
+        <p>一、导出用户数据(用该方式导出时会将煤油数据的表去除，所以要保证每个表都有数据)，要使用oracle用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">su - oracle</span><br><span class="line"></span><br><span class="line">exp [username]/[nserpasswd]@localhost:1521/orcl file=test.dmp owner=[username]</span><br></pre></td></tr></table></figure></p>
+<p>orcl为数据库名称<br>二、导入新数据库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IMP [username]/[nserpasswd]@localhost:1521/orcl fromuser=[username] touser=[username] file=test.dmp</span><br></pre></td></tr></table></figure></p>
 <p>提示：<br>可能要检查字符集，资料说要保证字符集一样，但测试发现字符集不一样没有影响。<br>查看字符集：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from nls_database_parameters t where t.parameter=&apos;NLS_CHARACTERSET&apos;</span><br></pre></td></tr></table></figure></p>
 <p>查询结构例如：<br>ZHS16CGB231280<br>修改字符集：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#vi /home/orcle/.bash_profile</span><br><span class="line">export NLS_LANG=america.ZHS16CGB231280</span><br><span class="line">#source /home/orcle/.bash_profile</span><br></pre></td></tr></table></figure></p>
 
