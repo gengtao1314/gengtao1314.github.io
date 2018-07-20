@@ -148,14 +148,17 @@
 
 
 
+<meta name="description" content="1、在xml文件里配置bean，bean的配置中配置init-method方法（该方法配置成你想要执行的操作方法）。1&amp;lt;bean id=&amp;quot;PoneBlacklistCache&amp;quot; class=&amp;quot;com.jd.qrx.trade.cache.impl.PhoneBlacklistCache&amp;quot; scope=&amp;quot;singleton&amp;quot;  ini">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js使用Json封装数据">
-<meta property="og:url" content="http://yoursite.com/2018/07/09/js使用Json封装数据/index.html">
+<meta property="og:title" content="在项目启动时执执行某些方法">
+<meta property="og:url" content="http://yoursite.com/2018/07/20/在项目启动时执执行某些方法/index.html">
 <meta property="og:site_name" content="gtaotao">
+<meta property="og:description" content="1、在xml文件里配置bean，bean的配置中配置init-method方法（该方法配置成你想要执行的操作方法）。1&amp;lt;bean id=&amp;quot;PoneBlacklistCache&amp;quot; class=&amp;quot;com.jd.qrx.trade.cache.impl.PhoneBlacklistCache&amp;quot; scope=&amp;quot;singleton&amp;quot;  ini">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-09T01:20:39.472Z">
+<meta property="og:updated_time" content="2018-07-20T10:23:25.603Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js使用Json封装数据">
+<meta name="twitter:title" content="在项目启动时执执行某些方法">
+<meta name="twitter:description" content="1、在xml文件里配置bean，bean的配置中配置init-method方法（该方法配置成你想要执行的操作方法）。1&amp;lt;bean id=&amp;quot;PoneBlacklistCache&amp;quot; class=&amp;quot;com.jd.qrx.trade.cache.impl.PhoneBlacklistCache&amp;quot; scope=&amp;quot;singleton&amp;quot;  ini">
 
 
 
@@ -185,13 +188,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/09/js使用Json封装数据/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/20/在项目启动时执执行某些方法/"/>
 
 
 
 
 
-  <title>js使用Json封装数据 | gtaotao</title>
+  <title>在项目启动时执执行某些方法 | gtaotao</title>
   
 
 
@@ -351,7 +354,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/09/js使用Json封装数据/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/20/在项目启动时执执行某些方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gtaotao">
@@ -368,7 +371,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js使用Json封装数据</h1>
+          <h1 class="post-title" itemprop="name headline">在项目启动时执执行某些方法</h1>
         
 
         <div class="post-meta">
@@ -380,8 +383,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-09T09:20:39+08:00">
-                2018-07-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-20T18:04:01+08:00">
+                2018-07-20
               </time>
             
 
@@ -390,6 +393,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -418,7 +443,34 @@
       
 
       
-        
+        <p>1、在xml文件里配置bean，bean的配置中配置init-method方法（该方法配置成你想要执行的操作方法）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;PoneBlacklistCache&quot; class=&quot;com.jd.qrx.trade.cache.impl.PhoneBlacklistCache&quot; scope=&quot;singleton&quot;  init-method=&quot;init&quot;&gt;&lt;/bean&gt;</span><br></pre></td></tr></table></figure></p>
+<p>定义类文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class PhoneBlacklistCache &#123;</span><br><span class="line">2   　　public List&lt;String&gt; phoneBlacklist = new ArrayList&lt;String&gt;();</span><br><span class="line">3  　　public void init()&#123; 　　　　</span><br><span class="line">4  　　　　//想进行的操作</span><br><span class="line">5  　　　　//比如：查询数据库，写到内存</span><br><span class="line">6      &#125;</span><br><span class="line">7  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>2、在项目启动后每n秒执行一次方法（当重复次数设为0时，则仅启动时执行一次）（未实际测试）</p>
+<p>在web.xml上添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;context-param&gt;  </span><br><span class="line">    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;  </span><br><span class="line">    &lt;param-value&gt;  </span><br><span class="line">             classpath:conf/spring-config.xml,  </span><br><span class="line">             classpath:conf/quartz-config.xml</span><br><span class="line">        &lt;/param-value&gt;  </span><br><span class="line">&lt;/context-param</span><br><span class="line">``</span><br><span class="line">然后在quartz-config.xml中做如下配置</span><br></pre></td></tr></table></figure></p>
+<p>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
+<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd  
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd" default-lazy-init="false"><br>    <bean id="quartzJob" class="xx.xx.xx.QuartzJob"><br>    <bean id="jobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"><br>        <property name="targetObject"><br>            <ref bean="quartzJob"><br>        </ref></property><br>        <property name="targetMethod"><br>            <value>xxxxxx(你在QuartzJob中的方法)</value><br>        </property><br>    </bean></bean></beans></p>
+<pre><code>&lt;!-- 项目启动后任务就执行一次 --&gt;
+&lt;bean id=&quot;simpleTrigger&quot; class=&quot;org.springframework.scheduling.quartz.SimpleTriggerBean&quot;&gt;
+    &lt;property name=&quot;jobDetail&quot; ref=&quot;jobDetail&quot;/&gt;
+    &lt;property name=&quot;startDelay&quot; value=&quot;500&quot;/&gt;
+    &lt;!--间隔时间--&gt;
+    &lt;property name=&quot;repeatInterval&quot; value=&quot;0&quot;/&gt;
+    &lt;!--重复次数--&gt;
+    &lt;property name=&quot;repeatCount&quot; value=&quot;0&quot;/&gt;
+&lt;/bean&gt;
+
+&lt;span style=&quot;white-space:pre&quot;&gt;&lt;/span&gt;
+&lt;bean id=&quot;startQuertz&quot; class=&quot;org.springframework.scheduling.quartz.SchedulerFactoryBean&quot;&gt;
+    &lt;property name=&quot;triggers&quot;&gt;
+        &lt;list&gt;
+            &lt;ref bean=&quot;simpleTrigger&quot;/&gt;
+        &lt;/list&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p><br><code>`</code></p>
+
       
     </div>
     
@@ -456,8 +508,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/19/javaweb-json的使用/" rel="next" title="javaweb json的使用">
-                <i class="fa fa-chevron-left"></i> javaweb json的使用
+              <a href="/2018/07/18/Java使用RSA加密工具/" rel="next" title="Java使用RSA加密工具">
+                <i class="fa fa-chevron-left"></i> Java使用RSA加密工具
               </a>
             
           </div>
@@ -465,10 +517,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/09/html实现类似qq表情/" rel="prev" title="html实现类似qq表情">
-                html实现类似qq表情 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
