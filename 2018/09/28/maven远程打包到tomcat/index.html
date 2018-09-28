@@ -148,17 +148,17 @@
 
 
 
-<meta name="description" content="一、导出用户数据(用该方式导出时会将煤油数据的表去除，所以要保证每个表都有数据)，要使用oracle用户123su - oracleexp [username]/[nserpasswd]@localhost:1521/orcl file=test.dmp owner=[username] orcl为数据库名称二、导入新数据库1IMP [username]/[nserpasswd]@localhos">
+<meta name="description" content="一、    解压tomcat到服务器二、    打开 Tomcat 文件夹下的 conf 文件夹中的 tomcat-users.xml，添加一下代码：123456&amp;lt;role rolename=&amp;quot;manager&amp;quot;/&amp;gt;&amp;lt;role rolename=&amp;quot;manager-gui&amp;quot;/&amp;gt;&amp;lt;role rolename=&amp;quot;admin&amp;q">
 <meta property="og:type" content="article">
-<meta property="og:title" content="oracle导出用户数据">
-<meta property="og:url" content="http://yoursite.com/2018/04/08/oracle导出用户数据/index.html">
+<meta property="og:title" content="maven远程打包到tomcat">
+<meta property="og:url" content="http://yoursite.com/2018/09/28/maven远程打包到tomcat/index.html">
 <meta property="og:site_name" content="gtaotao">
-<meta property="og:description" content="一、导出用户数据(用该方式导出时会将煤油数据的表去除，所以要保证每个表都有数据)，要使用oracle用户123su - oracleexp [username]/[nserpasswd]@localhost:1521/orcl file=test.dmp owner=[username] orcl为数据库名称二、导入新数据库1IMP [username]/[nserpasswd]@localhos">
+<meta property="og:description" content="一、    解压tomcat到服务器二、    打开 Tomcat 文件夹下的 conf 文件夹中的 tomcat-users.xml，添加一下代码：123456&amp;lt;role rolename=&amp;quot;manager&amp;quot;/&amp;gt;&amp;lt;role rolename=&amp;quot;manager-gui&amp;quot;/&amp;gt;&amp;lt;role rolename=&amp;quot;admin&amp;q">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-28T02:52:27.375Z">
+<meta property="og:updated_time" content="2018-09-28T09:52:05.775Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="oracle导出用户数据">
-<meta name="twitter:description" content="一、导出用户数据(用该方式导出时会将煤油数据的表去除，所以要保证每个表都有数据)，要使用oracle用户123su - oracleexp [username]/[nserpasswd]@localhost:1521/orcl file=test.dmp owner=[username] orcl为数据库名称二、导入新数据库1IMP [username]/[nserpasswd]@localhos">
+<meta name="twitter:title" content="maven远程打包到tomcat">
+<meta name="twitter:description" content="一、    解压tomcat到服务器二、    打开 Tomcat 文件夹下的 conf 文件夹中的 tomcat-users.xml，添加一下代码：123456&amp;lt;role rolename=&amp;quot;manager&amp;quot;/&amp;gt;&amp;lt;role rolename=&amp;quot;manager-gui&amp;quot;/&amp;gt;&amp;lt;role rolename=&amp;quot;admin&amp;q">
 
 
 
@@ -188,13 +188,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/08/oracle导出用户数据/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/28/maven远程打包到tomcat/"/>
 
 
 
 
 
-  <title>oracle导出用户数据 | gtaotao</title>
+  <title>maven远程打包到tomcat | gtaotao</title>
   
 
 
@@ -354,7 +354,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/08/oracle导出用户数据/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/28/maven远程打包到tomcat/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="gtaotao">
@@ -371,7 +371,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">oracle导出用户数据</h1>
+          <h1 class="post-title" itemprop="name headline">maven远程打包到tomcat</h1>
         
 
         <div class="post-meta">
@@ -383,8 +383,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-08T11:23:29+08:00">
-                2018-04-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-28T17:46:12+08:00">
+                2018-09-28
               </time>
             
 
@@ -406,8 +406,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/oracle/" itemprop="url" rel="index">
-                    <span itemprop="name">oracle</span>
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
                   </a>
                 </span>
 
@@ -443,10 +443,14 @@
       
 
       
-        <p>一、导出用户数据(用该方式导出时会将煤油数据的表去除，所以要保证每个表都有数据)，要使用oracle用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">su - oracle</span><br><span class="line"></span><br><span class="line">exp [username]/[nserpasswd]@localhost:1521/orcl file=test.dmp owner=[username]</span><br></pre></td></tr></table></figure></p>
-<p>orcl为数据库名称<br>二、导入新数据库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IMP [username]/[nserpasswd]@localhost:1521/orcl fromuser=[username] touser=[username] file=test.dmp</span><br></pre></td></tr></table></figure></p>
-<p>提示：<br>可能要检查字符集，资料说要保证字符集一样，但测试发现字符集不一样没有影响。<br>查看字符集：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from nls_database_parameters t where t.parameter=&apos;NLS_CHARACTERSET&apos;</span><br></pre></td></tr></table></figure></p>
-<p>查询结构例如：<br>ZHS16CGB231280<br>修改字符集：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#vi /home/orcle/.bash_profile</span><br><span class="line">export NLS_LANG=america.ZHS16CGB231280</span><br><span class="line">#source /home/orcle/.bash_profile</span><br></pre></td></tr></table></figure></p>
+        <p>一、    解压tomcat到服务器<br>二、    打开 Tomcat 文件夹下的 conf 文件夹中的 tomcat-users.xml，添加一下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;role rolename=&quot;manager&quot;/&gt;</span><br><span class="line">&lt;role rolename=&quot;manager-gui&quot;/&gt;</span><br><span class="line">&lt;role rolename=&quot;admin&quot;/&gt;</span><br><span class="line">&lt;role rolename=&quot;admin-gui&quot;/&gt;</span><br><span class="line">&lt;role rolename=&quot;manager-script&quot;/&gt;</span><br><span class="line">&lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;admin-gui,admin,manager-gui,manager,manager-script&quot;/&gt;</span><br></pre></td></tr></table></figure></p>
+<p>三、    设置tomcat允许远程访问manager<br>修改tomcate/webapps/manager/META-INF/content.xml<br>将：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;Valve className=&quot;org.apache.catalina.valves.RemoteAddrValve&quot;</span><br><span class="line">          allow=&quot;127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>修改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;Valve className=&quot;org.apache.catalina.valves.RemoteAddrValve&quot;</span><br><span class="line">         allow=&quot;\d+\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>四、    设置tomcat允许远程提交到manage（若不配置则会在远程提交war包时connect失败错误）<br>打开tomcat/conf/Catalina/localhost/manager.xml(若没有则新建该文件)，添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;Context privileged=&quot;true&quot; antiResourceLocking=&quot;false&quot;</span><br><span class="line">      docBase=&quot;$&#123;catalina.home&#125;/webapps/manager&quot;&gt;</span><br><span class="line">             &lt;Valve className=&quot;org.apache.catalina.valves.RemoteAddrValve&quot; allow=&quot;^.*$&quot; /&gt;</span><br><span class="line">&lt;/Context&gt;</span><br></pre></td></tr></table></figure></p>
+<p>此时启动tomcat，进入IP:8080，点击 Manager App按钮会提示输入用户名和密码，登陆后可以看到当前tomcat所管理的所有项目<br>五、    配置maven的setting文件，在文件的<servers></servers>中添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;server&gt;</span><br><span class="line">&lt;id&gt;test&lt;/id&gt;</span><br><span class="line">&lt;username&gt;admin&lt;/username&gt;</span><br><span class="line">&lt;password&gt;admin&lt;/password&gt;</span><br><span class="line">&lt;/server&gt;</span><br></pre></td></tr></table></figure></p>
+<p>Username和password要与tomcat-users.xml文件中添加的用户名和密码一致。<br>六、    配置pom文件<br>在<plugin></plugin>中添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">	&lt;path&gt;/demo1&lt;/path&gt;  &lt;!--此为在tomcat/webapps下自定义的该war包名--&gt;</span><br><span class="line">	&lt;url&gt;http://92.168.98:8080/manager/text&lt;/url&gt; &lt;!--此为tomcat服务器地址</span><br><span class="line">	&lt;server&gt;test&lt;/server&gt; &lt;!--此处要与settings.xml文件中定义的id相同--&gt;</span><br><span class="line">	&lt;username&gt;admin&lt;/username&gt;</span><br><span class="line">	&lt;password&gt;admin&lt;/password&gt;&lt;!--前面配置的tomcat用户名和密码--&gt;</span><br><span class="line">	&lt;update&gt;true&lt;/true&gt;&lt;!--当提交已有的项目时,要添加该参数--&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure></p>
+<p>七、    设置运行方式为：clean package tomcat:deploy<br>八、    点击运行<br>九、    网上说重复提交同一项目会造成内存泄漏，可做以下措施：<br>1、    添加依赖：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;depeddency&gt;</span><br><span class="line">&lt;groupId&gt;se.jiderhamn.classloader-leak-prevention&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt; classloader-leak-prevention-servlet&lt;/artifactId&gt;</span><br><span class="line">&lt;version&gt;2.1.0&lt;/version&gt;</span><br><span class="line">&lt;/depeddency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>2、    在web.xml文件中添加监听<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;listener&gt;</span><br><span class="line">&lt;listener-class&gt;se.jiderhamn.classloader-leak.prevention.ClassLoaderLeakPreventorListener&lt;/listener-class&gt;</span><br><span class="line">&lt;/listener&gt;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -485,8 +489,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/04/pl-sql配置/" rel="next" title="pl/sql配置">
-                <i class="fa fa-chevron-left"></i> pl/sql配置
+              <a href="/2018/09/27/tomcat修改tomcat-users-xml后远程登陆tomcat后台失败/" rel="next" title="tomcat修改tomcat-users.xml后远程登陆tomcat后台失败">
+                <i class="fa fa-chevron-left"></i> tomcat修改tomcat-users.xml后远程登陆tomcat后台失败
               </a>
             
           </div>
@@ -494,10 +498,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/28/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
